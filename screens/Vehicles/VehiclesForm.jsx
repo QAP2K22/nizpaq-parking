@@ -12,7 +12,6 @@ import * as yup from 'yup'
 const VehiclesForm = ({ navigation, route }) => {
     const [vehTypeData, setVehTypeData] = useState([])
     const { action, value: vehicleValue } = route.params
-    console.log(route.params.id)
     let defaultValues = { vehicleName: '', vehicleColor: '', vehiclePlate: '', vehicleTypeName: '', ownerName: '', ownerNumber: '', ownerCPF: '' }
 
     if (vehicleValue) {
@@ -106,9 +105,6 @@ const VehiclesForm = ({ navigation, route }) => {
                     values["vehicleTypeIconName"] = "car"
                 }
 
-                console.log(values)
-
-
                 garageName.splice(index, 1, values)
 
                 await AsyncStorage.setItem("vehiclesGarages:"+route.params.id, JSON.stringify(garageName))
@@ -117,6 +113,8 @@ const VehiclesForm = ({ navigation, route }) => {
                     description: "Veiculo foi alterada com sucesso.",
                     type: "success",
                 })
+
+                navigation.goBack()
             }
 
         }

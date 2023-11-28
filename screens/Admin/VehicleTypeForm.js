@@ -100,7 +100,6 @@ const VehicleTypeForm = ({ navigation, route }) => {
               name={"vehicleTypeIconName"}
               label={"Ícone"}
               placeholder={"Digite o nome do ícone"}
-              keyboardType={"phone-pad"}
               onChangeText={(text) => { handleChange("vehicleTypeIconName")(text), setVehicleIcon(text) }}
               onBlur={handleBlur('vehicleTypeIconName')}
               value={values.vehicleTypeIconName}

@@ -18,6 +18,7 @@ const Garages = ({ navigation }) => {
         const garageName = response ? JSON.parse(response) : []
         setData(garageName)
     }
+    
     return (
         <View style={styles.Container}>
             <FlatList

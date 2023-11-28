@@ -5,10 +5,11 @@ import VisitedVehicles from "../screens/VisitedVehicles/VisitedVehicles"
 import AdminStack from "../screens/Admin/AdminStack"
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { UserIsAdmin } from '../auth/auth';
+import HeaderRight from '../components/HeaderIcon/HeaderIcon';
 
 const Tab = createBottomTabNavigator();
 
-const DrawerRoutesBotton = () => {
+const DrawerRoutesBotton = ({navigation}) => {
     const [isAdmin, setIsAdmin] = useState(false)
     useEffect(() => {
         setIsAdmin(UserIsAdmin())
@@ -40,6 +41,9 @@ const DrawerRoutesBotton = () => {
                     tabBarIcon: ({ color, size }) => (
                         <MaterialCommunityIcons name="garage" color={color} size={size} />
                     ),
+                    headerRight: () => (
+                        <HeaderRight navigation={navigation} setReturn={false}/>
+                    ),
                 }}
             />
             {isAdmin ?
@@ -52,6 +56,7 @@ const DrawerRoutesBotton = () => {
                         tabBarIcon: ({ color, size }) => (
                             <MaterialCommunityIcons name="account-star" color={color} size={size} />
                         ),
+    
                     }}
                 /> : <></>
 

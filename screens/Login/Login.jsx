@@ -36,9 +36,7 @@ const Login = ({ navigation }) => {
 
 
     const getLogin = () => {
-        authenticateUser("Admin")
-        navigation.navigate("StackRoutes", { screen: "GaragesStack" })
-      /*   const userTrue = users.find((user) => user.Name == login & user.Password == password)
+        const userTrue = users.find((user) => user.Name == login & user.Password == password)
         if (userTrue) {
             authenticateUser(userTrue["LoginPermission"])
             navigation.navigate("StackRoutes", { screen: "GaragesStack" })
@@ -52,8 +50,7 @@ const Login = ({ navigation }) => {
                     type: "danger",
                 });
             }
-        } */
-
+        }
     }
 
     return (

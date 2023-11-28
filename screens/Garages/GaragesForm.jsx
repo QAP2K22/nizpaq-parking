@@ -30,7 +30,7 @@ const GaragesForm = ({ navigation, route }) => {
       .required('Você precisa inserir um endereço para a garagem.'),
     garageCEP: yup
       .string()
-      .min(9, ({ min }) => `O CEP precisa ter 8 números.`)
+      .min(8, ({ min }) => `O CEP precisa ter 8 números.`)
       .required('Você precisa inserir um CEP para a garagem.'),
     garageVacany: yup
       .number()

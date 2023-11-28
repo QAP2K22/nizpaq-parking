@@ -14,7 +14,6 @@ export default function App() {
         <DrawerRoutes />
       </PaperProvider>
 
-
       <FlashMessage position="top" />
     </>
   );

@@ -17,7 +17,6 @@ const VehicleType = ({ navigation }) => {
     const getData = async () => {
         const response = await AsyncStorage.getItem("vehicleType")
         const vehType = response ? JSON.parse(response) : []
-        console.log(vehType)
         setData(vehType)
     }
     const removeItem = async (value) => {

@@ -10,8 +10,8 @@ const GarageCard = ({garageName = "Garagem", garageIcon = "https://cdn.nar.realt
             <Card.Content>
                 <Text variant="titleLarge">{garageName}</Text>
                 <Text variant="bodyMedium">Vagas Totais: {totalVacancy}</Text>
-                <Text variant="bodyMedium">Vagas Ocupadas: {ocupedCacancy}</Text>
-                <Text variant="bodyMedium">Vagas Restantes: {totalVacancy - ocupedCacancy}</Text>
+   {/*              <Text variant="bodyMedium">Vagas Ocupadas: {ocupedCacancy}</Text>
+                <Text variant="bodyMedium">Vagas Restantes: {totalVacancy - ocupedCacancy}</Text> */}
             </Card.Content>
             <Card.Actions>
                 <Button disabled={!garageStatus} style={styles.ButtonStyle} labelStyle={{ color: "white" }} onPress={() => navigation.navigate("VehiclesStack", { screen: "vehicles", params: { id: garageName } })}>Abrir</Button>

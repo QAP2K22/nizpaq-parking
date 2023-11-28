@@ -7,12 +7,12 @@ const VehicleCard = ({ vehicleData = [], vehicleModel = "carro", vehicleModelNam
     const text = () => {
         return (
             <View>
-                {garageName ?
+               {/*  {garageName ?
                     <Text>Garagem: <Text>{garageName}</Text></Text> : <></>
                 }
                 {garageDate ?
                     <Text>Data: <Text>{garageDate}</Text></Text> : <></>
-                }
+                } */}
             </View>
         )
     }
@@ -22,7 +22,7 @@ const VehicleCard = ({ vehicleData = [], vehicleModel = "carro", vehicleModelNam
         <Card style={styles.Card}>
             <Card.Title
                 title={`${vehicleName} - ${vehicleColor}`}
-                subtitle={`${vehiclePlate}`}
+                subtitle={`Placa: ${vehiclePlate} | Tipo: ${vehicleModel}`}
                 left={(props) => <Avatar.Icon {...props} style={{ backgroundColor: '#FFC300' }} color={'#FFF'} icon={vehicleModelNameIcon} />}
                 right={() => text()}
             />
